@@ -7,52 +7,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="./assets/CSS/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
         <link rel="stylesheet" href="./assets/CSS/style.css">
 
+
         <title>Unit 4 Game!</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
     </head>
 
     <body>
-        <h1>You are a crystal collector in this game.</h1>
-        <h3>Here are the rules for you to play the game!</h3>
-        <p>
-            You will be given a random number at the start of the game
-        </p>
-        <p>
-            There are four crystals below. By clicking on a crystal you
-            will add a specific amount of points to your total score
-        </p>
-        <p>
-            You win the game by watching your total score to random
-            number, you lose the game if your total score goes above
-            the random number.
-        </p>
+        <div class="jumbotron w-60 text-center pt-2">
+            <h1 class="bg-info py-5 pt-0 mb-3">The Crystal Collector!</h1>
+            <h3 class="bg-warning py-3 mb-3">Here are the rules for you to play the game!</h3>
+            <ol class="text-justify">
+                <li class="mb-2">You will be given a random number at the start of the game</li>
+                <li class="mb-2">There are four crystals below. By clicking on a crystal you will add a specific amount
+                    of points to your total score</li>
+                <li class="mb-2">You win the game by watching your total score to random number, you lose the game if
+                    your total score goes above the random number</li>
+                <li class="mb-2">The value of each crystal is hidden from you until you click on it</li>
+                <li class="mb-4">Each time when the game starts, the game will change the values of each crystal</li>
+            </ol>
 
-        <p>
-            The value of each crystal is hidden from you until you
-            click on it
-        </p>
-        <p>
-            Each time when the game starts, the game will change the
-            values of each crystal
-        </p>
+            <button class = "btn-lg bg-danger mb-3" id="start-game">Start Game</button>
 
+            <br>
 
-        <!-- Optional JavaScript -->
+            <div id="targetScore">
+                <h4 class="texts">Score to hit: <span id="targeted-score"></span></h4>
+            </div>
+            <div id="winBoard">
+                <h4 class="texts">Wins: <span id="wins"></span></h1>
+            </div>
+            <div id="lossBoard">
+                <h4 class="texts">Loss: <span id="loss"></span></h4>
+            </div>
+
+            <div class="images mt-4">
+                <img class = "crystal-image"id="diamond" src="./assets/images/diamondImage.jpg" alt="">
+                <img class = "crystal-image"id="emerald" src="./assets/images/emeraldImage.jpg" alt="">
+                <img class = "crystal-image"id="ruby" src="./assets/images/rubyImage.jpg" alt="">
+                <img class = "crystal-image"id="sapphire" src="./assets/images/sapphireImage.jpg" alt="">
+            </div>
+
+            <div id="yourScoreBoard" class="mt-4">
+                <h4 class="texts text-result">Your total score is: <span id="your-score"></span></h4>
+            </div>
+
+            <div id = "message"></div>
+
+        </div>
         <script src="./assets/javascript/game.js"></script>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
     </body>
 
 </html>

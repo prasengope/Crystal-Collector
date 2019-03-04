@@ -1,0 +1,29 @@
+#targetScore, #winBoard, #lossBoard{
+    width: 230px;
+    height: 100px;
+    background: yellow;
+    color: red;
+    display: inline-block;
+}
+
+#yourScoreBoard{
+    width: 100%;
+    height: 100px;
+    background: steelblue;
+    display: inline-block;
+    align-content: center;
+}
+
+img{
+    width: 171px;
+    height: 125px;
+}
+
+span{
+    text-align: center;
+}
+
+.texts{
+    padding: 25px;
+    margin-top: 10px;
+}
